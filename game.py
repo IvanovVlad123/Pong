@@ -12,7 +12,7 @@ class player:
     s:int=0
     """rect - прямоугольник s-скорость изменения координты"""
     def update(self,width:int,height:int,dt:float):
-        """Смешение ракетки"""
+        """Смещение ракетки"""
         self.rect.top += self.s * dt
         self.rect.clamp_ip(0,0,width,height)
     def __init__(self,width:int,height:int):
@@ -26,7 +26,7 @@ class ball:
     b: Vector2
     s:Vector2 =Vector2(0.3,0.3)
     c:Vector2 = Vector2(0,0)
-    """b- кординта s- скорсть изменения c- счет"""
+    """b- координата s- скорость изменения c- счет"""
     def __init__(self,v:Vector2):
         """Инициализация входных значений"""
         self.b=v
