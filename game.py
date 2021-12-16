@@ -10,7 +10,7 @@ import time
 class player:
     rect: pygame.Rect
     s:int=0
-    """rect - прямоугольник s-скорость изменения кординты"""
+    """rect - прямоугольник s-скорость изменения координты"""
     def update(self,width:int,height:int,dt:float):
         """Смешение ракетки"""
         self.rect.top += self.s * dt
@@ -35,7 +35,7 @@ class ball:
         pygame.draw.circle(screen,color,(int(self.b[0]), int(self.b[1])),7)
 
     def update(self,dt:float,p1:player,p2:player,width:int,height:int):
-        """Изменение кординаты мяча"""
+        """Изменение координаты мяча"""
         self.b+=self.s*dt
         if p1.rect.collidepoint(self.b):
             self.s[0]*=-1
